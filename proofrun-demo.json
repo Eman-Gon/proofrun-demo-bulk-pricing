@@ -1,0 +1,12 @@
+{
+  "id": "demo-bulk-pricing",
+  "name": "Wholesale pricing demo",
+  "module": "pricing_service",
+  "endpoint": "/quotes",
+  "image_name": "proofrun-demo-bulk-pricing",
+  "repair_paths": [
+    "pricing_service/pricing.py"
+  ],
+  "requirement": "Preserve the HTTP status and response body for synthetic wholesale quote and validation requests under the documented pricing contract.",
+  "benefit": "Evaluate the pricing refactor while preserving existing customer quote behavior."
+}
