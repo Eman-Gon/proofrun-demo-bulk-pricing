@@ -24,7 +24,7 @@ def quote(payload: object) -> dict:
         raise InvalidQuote("invalid_quantity", "Quantity must be an integer from 1 to 10000.")
 
     subtotal = quantity * UNIT_PRICE_CENTS
-    eligible_for_discount = quantity >= 10
+    eligible_for_discount = quantity > 10
     discount = subtotal // 10 if eligible_for_discount else 0
     return {
         "sku": SKU,
